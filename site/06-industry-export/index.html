@@ -1,0 +1,1593 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="NH3 Craft 粘液科技二期玩家手册、插件参考与常用命令">
+      
+      
+        <meta name="author" content="NH3 Craft">
+      
+      
+      
+        <link rel="prev" href="../05-slimefun-basics/">
+      
+      
+        <link rel="next" href="../07-combat-xp/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.49">
+    
+    
+      
+        <title>工业出口 - NH3 Craft 二期玩家文档</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.6f8fc17f.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+
+
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="green" data-md-color-accent="light-green">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#06" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href=".." title="NH3 Craft 二期玩家文档" class="md-header__button md-logo" aria-label="NH3 Craft 二期玩家文档" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            NH3 Craft 二期玩家文档
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              工业出口
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="green" data-md-color-accent="light-green"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+    
+  
+  首页
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../01-quick-start/" class="md-tabs__link">
+          
+  
+  完整玩家手册
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../player-guide/" class="md-tabs__link">
+          
+  
+  简版玩家指南
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="NH3 Craft 二期玩家文档" class="md-nav__button md-logo" aria-label="NH3 Craft 二期玩家文档" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    NH3 Craft 二期玩家文档
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    首页
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    完整玩家手册
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            完整玩家手册
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-quick-start/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    快速开始
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-xp-economy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    XP 经济
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-tier-unlock/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tier 与解锁
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-mining-and-orechunks/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    挖矿与矿物补偿
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-slimefun-basics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Slimefun 入门
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    工业出口
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    工业出口
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      什么是工业出口
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      出口层级与价格
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="出口层级与价格">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      具体物品价目
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#t4t5" class="md-nav__link">
+    <span class="md-ellipsis">
+      T4/T5 物品参考
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      出口层级与价格完整表
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      饱和度机制
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      出口检查流程
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      产出公式
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      不同阶段出口路线
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      玩家建议
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07-combat-xp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    战斗 XP
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08-market-trading/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    市场交易
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../09-tax-ubi/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    税收与 UBI
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../10-risk-control/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    风控与安全
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../11-power-machines-performance/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    电力与性能
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../12-commands-guide/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    命令教学
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../13-macro-economy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    宏观经济
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../14-command-cheatsheet/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    命令速查
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../15-faq/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FAQ
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../16-progression-routes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    发展路线
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../17-glossary/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    术语表
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    简版玩家指南
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            简版玩家指南
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../player-guide/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    简版目录
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../player-guide/01-overview-and-new-player/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    总览与新玩家
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../player-guide/02-combat-and-mining/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    杀怪与挖矿
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../player-guide/03-industry-and-trade/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    工业与交易
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../player-guide/04-tax-tier-and-energy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    税收、Tier 与电力
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../player-guide/05-market-and-macro/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    市场与宏观
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../player-guide/07-commands-progression-faq/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    命令、路线与 FAQ
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../player-guide/08-rules-and-checklist/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    红线与清单
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      什么是工业出口
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      出口层级与价格
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="出口层级与价格">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      具体物品价目
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#t4t5" class="md-nav__link">
+    <span class="md-ellipsis">
+      T4/T5 物品参考
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      出口层级与价格完整表
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      饱和度机制
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      出口检查流程
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      产出公式
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      不同阶段出口路线
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      玩家建议
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+
+
+                  
+
+
+<h1 id="06">06 工业生产与出口赚钱<a class="headerlink" href="#06" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p>返回：<a href="../">总目录</a></p>
+</blockquote>
+<h2 id="_1">什么是工业出口<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p>工业出口是把指定 Slimefun 工业品交给系统换取 XP 的核心玩法。</p>
+<p><code>text
+生产指定工业品
+→ /nh3export sell &lt;物品ID&gt;
+→ 系统检查 Tier、数量、限额、饱和度
+→ 扣除物品，发放 XP</code></p>
+<h2 id="_2">出口层级与价格<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>层级</th>
+<th>基础价</th>
+<th>最低 Tier</th>
+<th>每日次数</th>
+<th>代表物品</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>T1 基础</td>
+<td>10-30 XP</td>
+<td>Lv.0（无门槛）</td>
+<td>10 次/日</td>
+<td>铜锭、铁锭、镁粉</td>
+</tr>
+<tr>
+<td>T2 初级</td>
+<td>50-120 XP</td>
+<td>Lv.8（1600 XP）</td>
+<td>8 次/日</td>
+<td>钢锭、红色合金</td>
+</tr>
+<tr>
+<td>T3 中级</td>
+<td>200-500 XP</td>
+<td>Lv.15（3000 XP）</td>
+<td>5 次/日</td>
+<td>GEO 矿物、反应炉芯</td>
+</tr>
+<tr>
+<td>T4 高级</td>
+<td>800-2000 XP</td>
+<td>Lv.25（5000 XP）</td>
+<td>3 次/日</td>
+<td>反物质零件、Infinity 材料</td>
+</tr>
+<tr>
+<td>T5 顶级</td>
+<td>5000-20000 XP</td>
+<td>Lv.40（8000 XP）</td>
+<td>1 次/日</td>
+<td>高阶反应堆、时空合金</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_3">具体物品价目<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>物品 ID</th>
+<th>基础价</th>
+<th>Tier</th>
+<th>每次数量</th>
+<th>每日次数</th>
+<th>饱和阈值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>COPPER_INGOT</td>
+<td>15 XP</td>
+<td>T0</td>
+<td>64</td>
+<td>10</td>
+<td>500</td>
+</tr>
+<tr>
+<td>STEEL_INGOT</td>
+<td>80 XP</td>
+<td>T1</td>
+<td>16</td>
+<td>8</td>
+<td>200</td>
+</tr>
+<tr>
+<td>SULFATE</td>
+<td>200 XP</td>
+<td>T2</td>
+<td>32</td>
+<td>5</td>
+<td>100</td>
+</tr>
+</tbody>
+</table>
+<h3 id="t4t5">T4/T5 物品参考<a class="headerlink" href="#t4t5" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>物品 ID</th>
+<th>基础价</th>
+<th>Tier</th>
+<th>每次数量</th>
+<th>每日次数</th>
+<th>饱和阈值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ANTIMATTER_PART</td>
+<td>800 XP</td>
+<td>T3（5000 XP）</td>
+<td>4</td>
+<td>3</td>
+<td>20</td>
+</tr>
+<tr>
+<td>INFINITY_INGOT</td>
+<td>2000 XP</td>
+<td>T4（8000 XP）</td>
+<td>1</td>
+<td>1</td>
+<td>5</td>
+</tr>
+<tr>
+<td>REACTOR_CORE</td>
+<td>5000 XP</td>
+<td>T4（8000 XP）</td>
+<td>1</td>
+<td>1</td>
+<td>5</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>T4-T5 出口品是高阶终局内容，单次利润极高但每日仅 1 次，适合高阶工业玩家。</p>
+</blockquote>
+<h2 id="_4">出口层级与价格完整表<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>层级</th>
+<th>基础价区间</th>
+<th>最低 Tier</th>
+<th>XP 门槛</th>
+<th>每日次数</th>
+<th>代表物品</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>T1 基础</td>
+<td>10–30 XP</td>
+<td>T0</td>
+<td>0</td>
+<td>10 次</td>
+<td>铜锭、铁锭、镁粉</td>
+</tr>
+<tr>
+<td>T2 初级</td>
+<td>50–120 XP</td>
+<td>T1</td>
+<td>1600（Lv.8）</td>
+<td>8 次</td>
+<td>钢锭、红色合金</td>
+</tr>
+<tr>
+<td>T3 中级</td>
+<td>200–500 XP</td>
+<td>T2</td>
+<td>3000（Lv.15）</td>
+<td>5 次</td>
+<td>GEO 矿物、反应炉芯</td>
+</tr>
+<tr>
+<td>T4 高级</td>
+<td>800–2000 XP</td>
+<td>T3</td>
+<td>5000（Lv.25）</td>
+<td>3 次</td>
+<td>反物质零件、Infinity 材料</td>
+</tr>
+<tr>
+<td>T5 顶级</td>
+<td>5000–20000 XP</td>
+<td>T4</td>
+<td>8000（Lv.40）</td>
+<td>1 次</td>
+<td>高阶反应堆、时空合金</td>
+</tr>
+</tbody>
+</table>
+<h2 id="_5">饱和度机制<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<p>全服同一种物品出口越多，价格越低：</p>
+<table>
+<thead>
+<tr>
+<th>饱和度（全服出口次数/阈值）</th>
+<th>实际价格</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>≤ 1.0</td>
+<td>100%（原价）</td>
+</tr>
+<tr>
+<td>1.0 – 2.0</td>
+<td>70%</td>
+</tr>
+<tr>
+<td>2.0 – 3.0</td>
+<td>40%</td>
+</tr>
+<tr>
+<td>&gt; 3.0</td>
+<td>15%</td>
+</tr>
+</tbody>
+</table>
+<p><strong>含义</strong>：如果全服都在卖铜锭，你的收益只有 15%。多元化出口品才是正道。</p>
+<h2 id="_6">出口检查流程<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
+<ol>
+<li><strong>Tier 检查</strong> — 你的历史峰值是否达到该物品要求的等级？</li>
+<li><strong>背包检查</strong> — 你是否有足够的 SF 物品？（通过 nh3sfbridge 插件精确识别）</li>
+<li><strong>每日限额</strong> — 你今天这个物品出口了几次？</li>
+<li><strong>饱和度</strong> — 全服今天这个物品出口了多少？</li>
+<li><strong>经济政策</strong> — 服务器当前是否处于紧缩期？</li>
+</ol>
+<h2 id="_7">产出公式<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
+<p><code>最终价格 = 基础价 × 饱和度系数 × 经济政策系数</code></p>
+<p>经济政策系数由服务器自动调节：
+- 紧缩期：<code>industry_rate = 0.9</code>（打 9 折）
+- 正常期：<code>industry_rate = 1.0</code>
+- 宽松期：<code>industry_rate = 1.1</code>（加 10%）</p>
+<h2 id="_8">不同阶段出口路线<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>阶段</th>
+<th>推荐出口</th>
+<th>预期日收入</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>T0 新手</td>
+<td>铜锭、铁锭</td>
+<td>~150 XP</td>
+</tr>
+<tr>
+<td>T1 公民</td>
+<td>钢锭、合金</td>
+<td>~640 XP</td>
+</tr>
+<tr>
+<td>T2 商人</td>
+<td>GEO 矿物、中级材料</td>
+<td>~1000 XP</td>
+</tr>
+<tr>
+<td>T3 工业</td>
+<td>高级能源材料</td>
+<td>~2400 XP</td>
+</tr>
+<tr>
+<td>T4 高阶</td>
+<td>反物质零件</td>
+<td>~2000 XP</td>
+</tr>
+<tr>
+<td>T5 寡头</td>
+<td>终局材料</td>
+<td>~5000-20000 XP</td>
+</tr>
+</tbody>
+</table>
+<h2 id="_9">玩家建议<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>不要全服一起卷同一种出口品</strong> — 饱和度会让价格暴跌到 15%。</li>
+<li>做生产线前用 <code>/sfc</code> 算好材料成本和电力成本。</li>
+<li>低价出口品日限额高，适合每天稳定收入。</li>
+<li>高价出口品日限额低（T5 每日仅 1 次），但单次利润高。</li>
+<li>如果出口价突然变低，看看是不是饱和度触发了紧缩。</li>
+<li><code>/nh3export sell &lt;物品ID&gt;</code> 用的是 Slimefun 物品 ID，用 <code>/sfc</code> 查到后直接输入。</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+
+
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="页脚" >
+        
+          
+          <a href="../05-slimefun-basics/" class="md-footer__link md-footer__link--prev" aria-label="上一页: Slimefun 入门">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                上一页
+              </span>
+              <div class="md-ellipsis">
+                Slimefun 入门
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../07-combat-xp/" class="md-footer__link md-footer__link--next" aria-label="下一页: 战斗 XP">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                下一页
+              </span>
+              <div class="md-ellipsis">
+                战斗 XP
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "navigation.footer", "search.highlight", "search.suggest", "content.code.copy"], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.88dd0f4e.min.js"></script>
+      
+    
+  </body>
+</html>

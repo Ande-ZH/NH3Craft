@@ -1,0 +1,251 @@
+{% extends "base.html" %}
+
+{% block extrahead %}
+{% if page.is_homepage %}
+<script>document.addEventListener('DOMContentLoaded',function(){document.body.setAttribute('data-md-is-homepage','');});</script>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  darkMode: 'class',
+  theme: {
+    extend: {
+      colors: {
+        vpBg: '#1b1b1f',
+        vpBgSoft: '#242426',
+        vpBrand: '#10b981',
+        vpBrandHover: '#34d399',
+        vpText1: '#fffff5db',
+        vpText2: '#ebebf599',
+        vpBorder: '#32363f',
+        vpCodeBg: '#161618'
+      }
+    }
+  }
+}
+</script>
+<style>
+body[data-md-is-homepage] .md-container { max-width: 100% !important; padding: 0 !important; }
+body[data-md-is-homepage] .md-content { margin: 0 !important; }
+body[data-md-is-homepage] .md-content__inner { padding: 0 !important; margin: 0 !important; max-width: 100% !important; }
+body[data-md-is-homepage] .md-main { background: transparent; }
+body[data-md-is-homepage] .md-typeset { color: #fffff5db; }
+body[data-md-is-homepage] .md-sidebar { display: none !important; }
+body[data-md-is-homepage] .md-main__inner { display: block !important; }
+body[data-md-is-homepage] .md-footer { display: none !important; }
+body[data-md-is-homepage] .md-tabs { display: none !important; }
+body[data-md-is-homepage] .md-header__button[for="__drawer"] { display: none !important; }
+body[data-md-is-homepage] .md-overlay { display: none !important; }
+[data-md-color-scheme="slate"] .md-main__inner { background: #1b1b1f; }
+
+.hp-wrap { font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+.feature-box { background-color: #161618; border: 1px solid #32363f; border-radius: 12px; padding: 24px; transition: border-color 0.25s, background-color 0.25s; }
+.feature-box:hover { border-color: #10b981; }
+.feature-icon { display: flex; align-items: center; justify-content: center; width: 48px; height: 48px; border-radius: 8px; background-color: #242426; font-size: 24px; margin-bottom: 20px; }
+.btn-primary { background-color: #10b981; color: #1b1b1f; transition: background-color 0.25s; }
+.btn-primary:hover { background-color: #34d399; }
+.btn-secondary { background-color: #242426; border: 1px solid #32363f; color: #fffff5db; transition: border-color 0.25s, background-color 0.25s; }
+.btn-secondary:hover { border-color: #ebebf599; background-color: #32363f; }
+.btn-download { border-color: #10b981; color: #34d399; }
+.quest-card { background-color: #161618; border: 1px solid #32363f; border-radius: 12px; padding: 24px; position: relative; overflow: hidden; transition: transform 0.2s, border-color 0.25s; display: flex; flex-direction: column; height: 100%; }
+.quest-card:hover { border-color: #10b981; transform: translateY(-2px); }
+.chapter-number { position: absolute; top: -15px; right: -10px; font-size: 80px; font-weight: 900; color: rgba(255, 255, 255, 0.03); z-index: 0; pointer-events: none; }
+.mod-tag { background-color: rgba(16, 185, 129, 0.1); color: #10b981; padding: 2px 8px; border-radius: 4px; font-size: 0.75rem; font-weight: 600; margin-right: 6px; display: inline-block; margin-bottom: 4px; }
+.phase-divider { display: flex; align-items: center; margin: 60px 0 30px 0; color: #ebebf599; font-weight: 600; font-size: 0.9rem; letter-spacing: 0.05em; text-transform: uppercase; }
+.phase-divider::before, .phase-divider::after { content: ""; flex: 1; height: 1px; background-color: #32363f; }
+.phase-divider span { padding: 0 16px; }
+</style>
+{% endif %}
+{% endblock %}
+
+{% block content %}
+{% if page.is_homepage %}
+<div class="hp-wrap" style="background:#1b1b1f; min-height:80vh;">
+  <main class="flex-1 w-full max-w-[1152px] mx-auto px-6 pt-20 pb-24">
+
+    <div class="text-center">
+      <h1 class="text-6xl md:text-8xl lg:text-9xl font-extrabold tracking-tight mb-6">
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-cyan-500">NH3 Craft 二期</span>
+      </h1>
+      <p class="text-xl md:text-2xl text-vpText2 mb-10 max-w-2xl mx-auto font-medium">
+        欢迎来到 NH3 Craft 1.20.1 科技生存服务器，基于 Paper 的衍生服务端。服务器地址：mc.nh3.ren
+      </p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="01-quick-start/" class="btn-primary font-semibold py-3 px-8 rounded-full text-base">文档中心</a>
+        <a href="https://pan.nh3.ren" target="_blank" class="btn-secondary btn-download font-semibold py-3 px-8 rounded-full text-base">下载整合包</a>
+        <a href="https://status.nh3.ren" target="_blank" class="btn-secondary font-semibold py-3 px-8 rounded-full text-base">状态监测</a>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-28">
+      <div class="feature-box">
+        <div class="feature-icon">💠</div>
+        <h2 class="text-lg font-bold text-white mb-2">XP 核心经济</h2>
+        <p class="text-sm text-vpText2 leading-relaxed">二期把 XP 作为核心货币，余额用于支付、交易、税费和还款，历史最高 XP 则决定长期 Tier 与成长进度。</p>
+      </div>
+      <div class="feature-box">
+        <div class="feature-icon">⚙️</div>
+        <h2 class="text-lg font-bold text-white mb-2">Slimefun 工业循环</h2>
+        <p class="text-sm text-vpText2 leading-relaxed">挖矿获得矿物碎片，投入粘液科技机器生产工业品，再通过出口和玩家市场获得 XP，形成可持续生产链。</p>
+      </div>
+      <div class="feature-box">
+        <div class="feature-icon">📈</div>
+        <h2 class="text-lg font-bold text-white mb-2">市场与宏观调控</h2>
+        <p class="text-sm text-vpText2 leading-relaxed">出口饱和、价格走廊、市场熔断、CPI 与 Gini 指标共同维持经济稳定，避免无限刷钱和寡头垄断。</p>
+      </div>
+      <div class="feature-box">
+        <div class="feature-icon">🧭</div>
+        <h2 class="text-lg font-bold text-white mb-2">Tier 阶层解锁</h2>
+        <p class="text-sm text-vpText2 leading-relaxed">权限、维度、市场、转账和高级机器会随 Tier 逐步开放。先达到 Tier 1 与 72 小时有效在线，是新玩家第一目标。</p>
+      </div>
+      <div class="feature-box">
+        <div class="feature-icon">🏦</div>
+        <h2 class="text-lg font-bold text-white mb-2">借款与信用系统</h2>
+        <p class="text-sm text-vpText2 leading-relaxed">借款不再是免费 XP，而是基于有效在线、历史等级、信用分和还款记录的金融工具，适合用于明确可回本的扩建。</p>
+      </div>
+      <div class="feature-box">
+        <div class="feature-icon">🛡️</div>
+        <h2 class="text-lg font-bold text-white mb-2">风控与长期环境</h2>
+        <p class="text-sm text-vpText2 leading-relaxed">转账税、领地维护费、财富税、UBI、反小号套利与异常交易记录，让正常玩家长期发展，让漏洞路线无利可图。</p>
+      </div>
+    </div>
+
+    <div id="qq-group" class="mt-24">
+      <div class="phase-divider"><span>加入交流群</span></div>
+      <div class="feature-box max-w-3xl mx-auto text-center">
+        <div class="feature-icon mx-auto">💬</div>
+        <h2 class="text-2xl font-bold text-white mb-3">官方 QQ 交流群</h2>
+        <p class="text-sm text-vpText2 leading-relaxed mb-4">无论你是需要客户端下载、寻求科技线发展建议，还是找人一起联机建厂，都欢迎加入我们的 QQ 群！</p>
+        <p class="text-lg text-vpBrand font-bold">群号：686881520</p>
+      </div>
+    </div>
+
+    <div id="roadmap" class="mt-40 pt-10 border-t border-vpBorder/50">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold tracking-tight mb-4 text-white">二期成长路线图</h2>
+        <p class="text-lg text-vpText2 max-w-2xl mx-auto">
+          从新手生存到工业寡头，你的进度不只取决于刷资源，<br>还取决于 XP 峰值、生产线、信用记录和市场判断。
+        </p>
+      </div>
+
+      <div class="phase-divider"><span>Phase I : 新手生存与基础经济</span></div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="quest-card">
+          <span class="chapter-number">01</span>
+          <div class="z-10">
+            <div class="text-2xl mb-2">🏁</div>
+            <h3 class="text-xl font-bold text-white mb-2">进入服务器</h3>
+            <div class="mb-4"><span class="mod-tag">/sfc</span><span class="mod-tag">/sci</span><span class="mod-tag">Starter</span></div>
+            <p class="text-sm text-vpText2 leading-relaxed">首次进入领取 32 个铁锭启动包，学习基础命令，建立食物、矿物和安全住所，不急着借款或大规模圈地。</p>
+          </div>
+        </div>
+        <div class="quest-card">
+          <span class="chapter-number">02</span>
+          <div class="z-10">
+            <div class="text-2xl mb-2">⛏️</div>
+            <h3 class="text-xl font-bold text-white mb-2">挖矿与矿物补偿</h3>
+            <div class="mb-4"><span class="mod-tag">OreChunks</span><span class="mod-tag">Mining</span></div>
+            <p class="text-sm text-vpText2 leading-relaxed">原版矿物产出会被压低，但挖石头、深板岩、下界岩和矿物时可能获得 Slimefun 矿物碎片，工业玩家长期收益更高。</p>
+          </div>
+        </div>
+        <div class="quest-card">
+          <span class="chapter-number">03</span>
+          <div class="z-10">
+            <div class="text-2xl mb-2">⚔️</div>
+            <h3 class="text-xl font-bold text-white mb-2">战斗 XP</h3>
+            <div class="mb-4"><span class="mod-tag">Kill XP</span><span class="mod-tag">Anti-AFK</span></div>
+            <p class="text-sm text-vpText2 leading-relaxed">正常冒险和战斗能获得 XP，但 AFK、刷怪笼、同区块高频产出和个人窗口上限会限制刷怪塔收益。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="phase-divider"><span>Phase II : 公民、市场与工业生产</span></div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
+        <div class="quest-card">
+          <span class="chapter-number">04</span>
+          <div class="z-10">
+            <div class="text-2xl mb-2">🧱</div>
+            <h3 class="text-xl font-bold text-white mb-2">Tier 1 与有效在线</h3>
+            <div class="mb-4"><span class="mod-tag">Tier</span><span class="mod-tag">72h</span><span class="mod-tag">/playtime</span></div>
+            <p class="text-sm text-vpText2 leading-relaxed">通过历史最高 XP 与有效在线解锁基础经济功能。达到 Tier 1 和 72 小时有效在线后，转账、市场与借款资格才逐步开放。</p>
+          </div>
+        </div>
+        <div class="quest-card">
+          <span class="chapter-number">05</span>
+          <div class="z-10">
+            <div class="text-2xl mb-2">🏭</div>
+            <h3 class="text-xl font-bold text-white mb-2">工业出口</h3>
+            <div class="mb-4"><span class="mod-tag">/nh3export</span><span class="mod-tag">Slimefun</span></div>
+            <p class="text-sm text-vpText2 leading-relaxed">将指定 Slimefun 工业品出售给系统换取 XP。物品价格会受 Tier、每日次数、服务器饱和度和经济政策影响。</p>
+          </div>
+        </div>
+        <div class="quest-card">
+          <span class="chapter-number">06</span>
+          <div class="z-10">
+            <div class="text-2xl mb-2">🛒</div>
+            <h3 class="text-xl font-bold text-white mb-2">玩家市场</h3>
+            <div class="mb-4"><span class="mod-tag">/pay</span><span class="mod-tag">Shop</span><span class="mod-tag">Auction</span></div>
+            <p class="text-sm text-vpText2 leading-relaxed">玩家可以通过转账、摊位、拍卖和自由交易流通资源。极端价格、洗钱、小号转移和借款逃债会触发风控。</p>
+          </div>
+        </div>
+        <div class="quest-card">
+          <span class="chapter-number">07</span>
+          <div class="z-10">
+            <div class="text-2xl mb-2">⚡</div>
+            <h3 class="text-xl font-bold text-white mb-2">分层电力</h3>
+            <div class="mb-4"><span class="mod-tag">EcoPower</span><span class="mod-tag">/sci</span></div>
+            <p class="text-sm text-vpText2 leading-relaxed">前期发电基本正常，中后期和终局能源会被压低效率。合理规划机器区块、线路和生产节奏，比无脑堆机器更重要。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="phase-divider"><span>Phase III : 高阶经济与长期经营</span></div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="quest-card">
+          <span class="chapter-number">08</span>
+          <div class="z-10">
+            <div class="text-2xl mb-2">🏦</div>
+            <h3 class="text-xl font-bold text-white mb-2">信用借款</h3>
+            <div class="mb-4"><span class="mod-tag">Loan</span><span class="mod-tag">Credit</span></div>
+            <p class="text-sm text-vpText2 leading-relaxed">信用分、历史 XP、有效在线和还款记录决定额度与利率。借款期间禁止资产转移，逾期会进入违约或破产追缴。</p>
+          </div>
+        </div>
+        <div class="quest-card">
+          <span class="chapter-number">09</span>
+          <div class="z-10">
+            <div class="text-2xl mb-2">📊</div>
+            <h3 class="text-xl font-bold text-white mb-2">宏观经济</h3>
+            <div class="mb-4"><span class="mod-tag">CPI</span><span class="mod-tag">Gini</span><span class="mod-tag">UBI</span></div>
+            <p class="text-sm text-vpText2 leading-relaxed">服务器会观察 XP 流入流出、CPI 和 Gini，在经济过热或冷清时调整收益、税率和 UBI，让长期生态更稳定。</p>
+          </div>
+        </div>
+        <div class="quest-card border-vpBrand/50 shadow-[0_0_15px_rgba(16,185,129,0.1)]">
+          <span class="chapter-number text-vpBrand/10">10</span>
+          <div class="z-10">
+            <div class="text-2xl mb-2">👑</div>
+            <h3 class="text-xl font-bold text-vpBrand mb-2">工业寡头</h3>
+            <div class="mb-4"><span class="mod-tag bg-vpBrand text-vpBg">Endgame Economy</span></div>
+            <p class="text-sm text-vpText2 leading-relaxed">高阶玩家拥有更强生产能力，也承担更高财富税、摊位租金和市场责任。稳定供货、合理定价和产业协作才是长期优势。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="border-t border-vpBorder bg-vpBg py-8 mt-auto" style="font-family:inherit;">
+    <div class="max-w-4xl mx-auto px-6 text-center text-sm text-vpText2 flex flex-col items-center justify-center">
+      <p>Copyright &copy; 2026 NH3 Craft. All Rights Reserved.</p>
+      <p class="mt-2 text-xs">
+        Minecraft Server maintained by <span class="text-vpBrand font-semibold">Ande_ZH</span> |
+        <a href="https://space.bilibili.com/3461562555697570" target="_blank" rel="noopener noreferrer" class="hover:text-vpBrand transition-colors underline decoration-vpText2/50 underline-offset-4">Bilibili 个人主页</a> |
+        <a href="https://www.nh3.ren/introduction/" class="hover:text-vpBrand transition-colors underline decoration-vpText2/50 underline-offset-4">服务器介绍</a> |
+        <a href="https://status.nh3.ren" target="_blank" class="hover:text-vpBrand transition-colors underline decoration-vpText2/50 underline-offset-4">状态监测</a> |
+        <a href="https://www.nh3.ren/docs/" class="hover:text-vpBrand transition-colors underline decoration-vpText2/50 underline-offset-4">文档中心</a>
+      </p>
+    </div>
+  </footer>
+</div>
+{% else %}
+{{ super() }}
+{% endif %}
+{% endblock %}

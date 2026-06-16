@@ -1,0 +1,61 @@
+site_name: NH3 Craft 二期玩家文档
+site_description: NH3 Craft 粘液科技二期玩家手册、插件参考与常用命令
+site_author: NH3 Craft
+repo_name: nh3-craft-docs
+
+theme:
+  name: material
+  language: zh
+  custom_dir: docs/overrides
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - navigation.footer
+    - search.highlight
+    - search.suggest
+    - content.code.copy
+  palette:
+    - scheme: slate
+      primary: green
+      accent: light green
+
+markdown_extensions:
+  - admonition
+  - toc:
+      permalink: true
+  - tables
+  - fenced_code
+  - pymdownx.details
+  - pymdownx.superfences
+
+nav:
+  - 首页: index.md
+  - 完整玩家手册:
+      - 快速开始: 01-quick-start.md
+      - XP 经济: 02-xp-economy.md
+      - Tier 与解锁: 03-tier-unlock.md
+      - 挖矿与矿物补偿: 04-mining-and-orechunks.md
+      - Slimefun 入门: 05-slimefun-basics.md
+      - 工业出口: 06-industry-export.md
+      - 战斗 XP: 07-combat-xp.md
+      - 市场交易: 08-market-trading.md
+      - 税收与 UBI: 09-tax-ubi.md
+      - 风控与安全: 10-risk-control.md
+      - 电力与性能: 11-power-machines-performance.md
+      - 命令教学: 12-commands-guide.md
+      - 宏观经济: 13-macro-economy.md
+      - 命令速查: 14-command-cheatsheet.md
+      - FAQ: 15-faq.md
+      - 发展路线: 16-progression-routes.md
+      - 术语表: 17-glossary.md
+  - 简版玩家指南:
+      - 简版目录: player-guide/index.md
+      - 总览与新玩家: player-guide/01-overview-and-new-player.md
+      - 杀怪与挖矿: player-guide/02-combat-and-mining.md
+      - 工业与交易: player-guide/03-industry-and-trade.md
+      - 税收、Tier 与电力: player-guide/04-tax-tier-and-energy.md
+      - 市场与宏观: player-guide/05-market-and-macro.md
+      - 命令、路线与 FAQ: player-guide/07-commands-progression-faq.md
+      - 红线与清单: player-guide/08-rules-and-checklist.md
