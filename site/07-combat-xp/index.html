@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="NH3 Craft 粘液科技二期玩家手册、插件参考与常用命令">
+        <meta name="description" content="NH3 Craft 粘液科技玩家手册与常用命令">
       
       
         <meta name="author" content="NH3 Craft">
@@ -24,7 +24,7 @@
     
     
       
-        <title>战斗 XP - NH3 Craft 二期玩家文档</title>
+        <title>战斗 XP - NH3 Craft 玩家文档</title>
       
     
     
@@ -92,7 +92,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="页眉">
-    <a href=".." title="NH3 Craft 二期玩家文档" class="md-header__button md-logo" aria-label="NH3 Craft 二期玩家文档" data-md-component="logo">
+    <a href=".." title="NH3 Craft 玩家文档" class="md-header__button md-logo" aria-label="NH3 Craft 玩家文档" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -106,7 +106,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            NH3 Craft 二期玩家文档
+            NH3 Craft 玩家文档
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -267,13 +267,13 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="NH3 Craft 二期玩家文档" class="md-nav__button md-logo" aria-label="NH3 Craft 二期玩家文档" data-md-component="logo">
+    <a href=".." title="NH3 Craft 玩家文档" class="md-nav__button md-logo" aria-label="NH3 Craft 玩家文档" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
 
     </a>
-    NH3 Craft 二期玩家文档
+    NH3 Craft 玩家文档
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -1186,7 +1186,7 @@
 <p>返回：<a href="../">总目录</a></p>
 </blockquote>
 <h2 id="xp">杀怪 XP 是稳定收入<a class="headerlink" href="#xp" title="Permanent link">&para;</a></h2>
-<p>杀怪是二期重要 XP 来源之一（目标占比约 40%），但有明确上限和防刷机制。</p>
+<p>杀怪是重要 XP 来源之一（目标占比约 40%），但有明确上限和防刷机制。</p>
 <h2 id="xp_1">杀怪 XP 详细表<a class="headerlink" href="#xp_1" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
@@ -1219,20 +1219,20 @@
 <tr>
 <td>监守者</td>
 <td>100%</td>
-<td>500</td>
-<td><strong>绕过限额</strong></td>
+<td>20</td>
+<td>Boss，受日/周限额</td>
 </tr>
 <tr>
 <td>凋灵</td>
 <td>100%</td>
-<td>1000</td>
-<td><strong>绕过限额</strong></td>
+<td>50</td>
+<td>Boss，受日/周限额</td>
 </tr>
 <tr>
 <td>末影龙</td>
 <td>100%</td>
-<td>2000</td>
-<td><strong>绕过限额</strong></td>
+<td>100</td>
+<td>Boss，受日/周限额</td>
 </tr>
 <tr>
 <td>玩家造铁傀儡/雪傀儡</td>
@@ -1273,16 +1273,21 @@
 <td>XP × 0.5</td>
 </tr>
 <tr>
-<td><strong>Boss 绕过</strong></td>
-<td>监守者/凋灵/末影龙</td>
-<td>不计入窗口上限</td>
+<td><strong>Boss 日限额</strong></td>
+<td>500 XP / 天</td>
+<td>超过后当日不再获得 Boss XP</td>
+</tr>
+<tr>
+<td><strong>Boss 周限额</strong></td>
+<td>2000 XP / 周</td>
+<td>超过后当周不再获得 Boss XP</td>
 </tr>
 </tbody>
 </table>
 <h3 id="_2">举例<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <ul>
 <li>你在 10 分钟内杀了 1000 个僵尸（理论上 300 XP），但加上区块衰减和窗口上限，实际约拿到 300-1000 XP 左右。</li>
-<li>打一只凋灵直接拿 1000 XP，且不计入窗口 — Boss 狩猎是突破性收入。</li>
+<li>打一只凋灵拿 50 XP，但有日限额（500）和周限额（2000）约束，不能无限刷 Boss 赚钱。</li>
 </ul>
 <h3 id="_3">深夜衰减<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
 <p>凌晨 2:00-6:00 的在线时间按 <strong>0.5×</strong> 计入有效在线时长。杀怪 XP 本身不受影响，但这段时间的在线时长对 Tier 解锁打折。</p>
@@ -1302,7 +1307,12 @@
 <tbody>
 <tr>
 <td>正常冒险</td>
-<td>稳定，Boss 爆发</td>
+<td>稳定，精英怪高收益</td>
+<td>无</td>
+</tr>
+<tr>
+<td>Boss 狩猎</td>
+<td>单次高收益（20-100 XP），但有日/周限额</td>
 <td>无</td>
 </tr>
 <tr>
@@ -1324,11 +1334,10 @@
 </table>
 <h2 id="_6">玩家建议<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
 <ul>
-<li>正常冒险和打 Boss 是最健康的收入方式。</li>
+<li>正常冒险和打精英怪是最健康的收入方式。</li>
+<li>Boss 收益已大幅降低（监守者 20/凋灵 50/末影龙 100），且有日限额 500、周限额 2000。</li>
 <li>不要把全部收入押在刷怪塔上 — 区块衰减和窗口上限会让收益锐减。</li>
-<li>Boss 是突破性收入：凋灵 1000 XP、末影龙 2000 XP 且不计限额。</li>
 <li>换个区块打怪可以重置区块累计，比一直站桩强。</li>
-<li>ElectricSpawners、MobCapturer、SoulJars 等产出的怪受刷怪笼 0.5× 惩罚。</li>
 </ul>
 
 

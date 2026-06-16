@@ -2,7 +2,7 @@
 
 > 返回：[总目录](index.md)
 
-## Slimefun 是二期核心
+## Slimefun 是核心
 
 Slimefun 是服务器的科技核心。原版矿物减少后，你几乎必须走 Slimefun 路线才能高效产出 XP。
 

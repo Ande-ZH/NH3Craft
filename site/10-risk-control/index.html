@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="NH3 Craft 粘液科技二期玩家手册、插件参考与常用命令">
+        <meta name="description" content="NH3 Craft 粘液科技玩家手册与常用命令">
       
       
         <meta name="author" content="NH3 Craft">
@@ -24,7 +24,7 @@
     
     
       
-        <title>风控与安全 - NH3 Craft 二期玩家文档</title>
+        <title>风控与安全 - NH3 Craft 玩家文档</title>
       
     
     
@@ -92,7 +92,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="页眉">
-    <a href=".." title="NH3 Craft 二期玩家文档" class="md-header__button md-logo" aria-label="NH3 Craft 二期玩家文档" data-md-component="logo">
+    <a href=".." title="NH3 Craft 玩家文档" class="md-header__button md-logo" aria-label="NH3 Craft 玩家文档" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -106,7 +106,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            NH3 Craft 二期玩家文档
+            NH3 Craft 玩家文档
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -267,13 +267,13 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="NH3 Craft 二期玩家文档" class="md-nav__button md-logo" aria-label="NH3 Craft 二期玩家文档" data-md-component="logo">
+    <a href=".." title="NH3 Craft 玩家文档" class="md-nav__button md-logo" aria-label="NH3 Craft 玩家文档" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
 
     </a>
-    NH3 Craft 二期玩家文档
+    NH3 Craft 玩家文档
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -1258,7 +1258,7 @@
 <p>返回：<a href="../">总目录</a></p>
 </blockquote>
 <h2 id="_1">为什么需要风控<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-<p>NH3 二期的经济系统围绕 XP 展开。如果没有风控，少数玩家可以通过漏洞、小号、AFK 刷怪、洗钱等方式快速积累大量 XP，破坏经济平衡。风控的目标是：</p>
+<p>NH3 的经济系统围绕 XP 展开。如果没有风控，少数玩家可以通过漏洞、小号、AFK 刷怪、洗钱等方式快速积累大量 XP，破坏经济平衡。风控的目标是：</p>
 <ul>
 <li><strong>让正常玩家长期发展</strong>。</li>
 <li><strong>让漏洞路线无利可图</strong>。</li>
@@ -1302,13 +1302,22 @@
 <td>0 XP，完全不计</td>
 </tr>
 <tr>
-<td>Boss 绕过</td>
-<td>监守者/凋灵/末影龙</td>
-<td>不计入窗口上限</td>
+<td>Boss 日限额</td>
+<td>500 XP / 天</td>
+<td>超过后当日不再获得 Boss XP</td>
+</tr>
+<tr>
+<td>Boss 周限额</td>
+<td>2000 XP / 周</td>
+<td>超过后当周不再获得 Boss XP</td>
 </tr>
 </tbody>
 </table>
-<p><strong>正常冒险不受影响</strong>：切换区块可重置区块累计，Boss 狩猎不受窗口限制。</p>
+<p><strong>Boss XP（受日/周限额约束）</strong>：
+- 监守者：20 XP
+- 凋灵：50 XP
+- 末影龙：100 XP</p>
+<p><strong>正常冒险不受影响</strong>：切换区块可重置区块累计。</p>
 <hr />
 <h2 id="_3">工业出口防刷机制<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <table>
